@@ -9,7 +9,7 @@
  * Output - Role Description Statement
  */
 
-function getUserRole(name,role){
+var getUserRole = function(name,role){
     var adminStatement = "You Have ALL Access to this site";
     var subadminStatment = "You have Access to add & delete courses";
     var testprepStatment = "You Have Access to create / delete test sets";
