@@ -18,8 +18,11 @@ var User = function(firstName, lastName, courseCount) {
 // invoking the constructor
 // instantiation
 var abhi = new User("Moonwalker","Abhi", 2);
-console.log(abhi); // user 1
+// console.log(abhi); // user 1
 
 
 var user2 = new User("ABC","sda",5); // user 2
-console.log(user2.getCourseCount());
+
+if (user2.hasOwnProperty("courseCount")){
+    user2.getCourseCount();
+}
