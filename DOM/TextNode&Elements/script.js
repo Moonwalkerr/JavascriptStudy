@@ -21,6 +21,45 @@ const courses = [
   },
 ];
 
+
+
+{/* <li>CourseName <span>Price</span> </li> */}
+
+
+
+const  generateLIST = () => {
+  const ul = document.querySelector(".list-group");
+  courses.forEach((course) => {
+
+    // Creating List Element
+    const li = document.createElement("li");
+    li.classList.add("list-group-item");
+    // Injecting course Name inside List Element by creating TextNode element inside it
+    const name = document.createTextNode(course.name);
+    li.appendChild(name);
+    
+    // Now Creating Span element
+    const span = document.createElement("span");
+    span.classList.add("float-right");
+    // Injecting Course Price inside Span element by creating TextNode element inside it
+    const price = document.createTextNode(course.price);
+    span.appendChild(price);
+    // Injecting Span element inside List 
+    li.appendChild(span);
+
+    // Now Creating Unordered List Element and injecting  above created elements into it
+    ul.appendChild(li);
+
+  })
+}
+
+
+window.addEventListener("load",generateLIST);
+
+
+
+
+
 {
   /* <li class="list-group-item">
   Complete C++ course
@@ -28,33 +67,33 @@ const courses = [
 </li>; */
 }
 
-function generateLIST() {
-  const ul = document.querySelector(".list-group");
-  ul.innerHTML = "";
-  courses.forEach((course) => {
-    const li = document.createElement("li");
-    li.classList.add("list-group-item");
+// function generateLIST() {
+//   const ul = document.querySelector(".list-group");
+//   ul.innerHTML = "";
+//   courses.forEach((course) => {
+//     const li = document.createElement("li");
+//     li.classList.add("list-group-item");
 
-    const name = document.createTextNode(course.name);
-    li.appendChild(name);
+//     const name = document.createTextNode(course.name);
+//     li.appendChild(name);
 
-    const span = document.createElement("span");
-    span.classList.add("float-right");
-    const price = document.createTextNode("$ " + course.price);
-    span.appendChild(price);
+//     const span = document.createElement("span");
+//     span.classList.add("float-right");
+//     const price = document.createTextNode("$ " + course.price);
+//     span.appendChild(price);
 
-    li.appendChild(span);
-    ul.appendChild(li);
-  });
-}
+//     li.appendChild(span);
+//     ul.appendChild(li);
+//   });
+// }
 
-// generateLIST();
+// // generateLIST();
 
-window.addEventListener("load", generateLIST);
+// window.addEventListener("load", generateLIST);
 
-const button = document.querySelector(".sort-btn");
+// const button = document.querySelector(".sort-btn");
 
-button.addEventListener("click", () => {
-  courses.sort((a, b) => a.price - b.price);
-  generateLIST();
-});
+// button.addEventListener("click", () => {
+//   courses.sort((a, b) => a.price - b.price);
+//   generateLIST();
+// });
