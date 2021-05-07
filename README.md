@@ -1,2 +1,2 @@
 # JavascriptStudy
-My repository , to practise and push javascript language from scratch to adv
+Here i keep practicing Javascript and keep pushing occasionally during my free time
