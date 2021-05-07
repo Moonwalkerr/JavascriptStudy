@@ -55,8 +55,15 @@ window.addEventListener("load",generateLIST);
 
 
 // Sorting Button
-const button = document.querySelector(".sort-btn");
-button.addEventListener("click",()=>{
+const ascbutton = document.querySelector(".sort-btn");
+ascbutton.addEventListener("click",()=>{
   courses.sort((a,b)=>a.price - b.price);
+  generateLIST();
+})
+
+
+const descbutton = document.querySelector(".btn-primary");
+descbutton.addEventListener("click",()=>{
+  courses.sort((a,b)=>b.price - a.price);
   generateLIST();
 })
