@@ -10,7 +10,7 @@ class User  {
         The user email is ${this.email}`);
     }
 
-    // Defining a private variable inside a class using "#"
+    // Defining a private variable or props inside a class using "#"
     #skillsets = []; // private variable, can't be accessed directly outside the class
 
     // Getter : used to get a value of private vaiable from a class
